@@ -19,8 +19,9 @@ find_package(rclpy REQUIRED)
 
 install(DIRECTORY
   launch
-  meshes
-  urdf
+  fleet_config
+  map
+  trafficNavPath
   DESTINATION share/${PROJECT_NAME})
   
 
