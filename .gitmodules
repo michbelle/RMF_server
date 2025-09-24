@@ -1,4 +1,4 @@
 [submodule "src/free_fleet"]
 	path = src/free_fleet
-	url = https://github.com/michbelle/free_fleet.git
+	url = git@github.com:michbelle/free_fleet.git
 	branch = jazzy
