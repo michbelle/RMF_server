@@ -4,7 +4,7 @@
   <arg name="server_uri" default="ws://localhost:8000/_internal" description="The URI of the api server to transmit state and task information."/>
 
   <group>
-    <include file="$(find-pkg-share rmf_server_elettra)/launch/rmf_launch/fleet_adapter.launch.xml">
+    <include file="$(find-pkg-share rmf_server_elettra)/launch/xml/fleet_adapter.launch.xml">
       <arg name="use_sim_time" value="true"/>
       <arg name="nav_graph_file" value="$(find-pkg-share rmf_server_elettra)/trafficNavPath/elettra/0.yaml" />
       <arg name="config_file" value="$(find-pkg-share rmf_server_elettra)/fleet_config/mini_fleet_config.yaml"/>

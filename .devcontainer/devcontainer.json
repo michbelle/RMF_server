@@ -4,7 +4,7 @@
     "image": "rmf_server_elettra",
     "remoteUser": "root",
     "workspaceFolder": "/root/openRMF_ws/",
-    "workspaceMount": "source=${localWorkspaceFolder},target=/root/openRMF_ws/,type=bind",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/root/openRMF_ws/src/RMF_server,type=bind",
     "customizations": {
         "vscode": {
             "extensions":[
