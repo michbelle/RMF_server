@@ -1,0 +1,18 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/root/openRMF_ws/install/free_fleet_examples/lib/python3.12/site-packages",
+        "/root/openRMF_ws/install/free_fleet_adapter/lib/python3.12/site-packages",
+        "/root/openRMF_ws/build/free_fleet",
+        "/root/openRMF_ws/install/free_fleet/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/root/openRMF_ws/install/free_fleet_examples/lib/python3.12/site-packages",
+        "/root/openRMF_ws/install/free_fleet_adapter/lib/python3.12/site-packages",
+        "/root/openRMF_ws/build/free_fleet",
+        "/root/openRMF_ws/install/free_fleet/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}
