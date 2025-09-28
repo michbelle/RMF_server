@@ -22,6 +22,7 @@ install(DIRECTORY
   fleet_config
   map
   trafficNavPath
+  zenoh
   DESTINATION share/${PROJECT_NAME})
   
 
