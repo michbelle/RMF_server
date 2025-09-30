@@ -46,7 +46,8 @@ rmf_fleet:
       initial_map: "PT"
       maps:
         PT:
-          map_url: "/root/ff_ws/src/myTesiCode/maps/map-elettra/amcl/map.yaml"
+          map_url: "/openRMF_ws/src/rmf_server/src/rmf_server_elettra/maps/elettra/amcl/map.yaml"
+          # map_url: "/root/ff_ws/src/myTesiCode/maps/map-elettra/amcl/map.yaml"
       # initial_pose: [-1.6000019311904907, -0.5031192898750305, 0]
 
   robot_state_update_frequency: 10.0 # Hz
