@@ -11,8 +11,8 @@ sudo chmod +x /usr/sbin/rmf_core
 cat << EOF3 | sudo tee /etc/systemd/system/rmf_core.service
 [Unit]
 Description=rmf code
-After=zenoh_client_server.target
-Wants=zenoh_client_server.target
+After=zenoh_client_server.service
+Wants=zenoh_client_server.service
 [Service]
 Type=simple
 ExecStart=/bin/bash /usr/sbin/rmf_core

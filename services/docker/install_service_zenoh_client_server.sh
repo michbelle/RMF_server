@@ -11,8 +11,8 @@ sudo chmod +x /usr/sbin/zenoh_client_server
 cat << EOF3 | sudo tee /etc/systemd/system/zenoh_client_server.service
 [Unit]
 Description=zenoh router
-After=zenoh_router.target
-Wants=zenoh_router.target
+After=zenoh_router.service
+Wants=zenoh_router.service
 [Service]
 Type=simple
 ExecStart=/bin/bash /usr/sbin/zenoh_client_server

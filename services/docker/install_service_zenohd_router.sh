@@ -11,7 +11,7 @@ sudo chmod +x /usr/sbin/zenoh_router
 cat << EOF3 | sudo tee /etc/systemd/system/zenoh_router.service
 [Unit]
 Description=zenoh router
-After=rmf_docker_container.target
+After=rmf_docker_container.service
 [Service]
 Type=simple
 ExecStart=/bin/bash /usr/sbin/zenoh_router

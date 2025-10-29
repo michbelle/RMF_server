@@ -11,8 +11,8 @@ sudo chmod +x /usr/sbin/rmf_adapter_jobot
 cat << EOF3 | sudo tee /etc/systemd/system/rmf_adapter_jobot.service
 [Unit]
 Description=rmf code
-After=rmf_core.target
-Wants=rmf_core.target
+After=rmf_core.service
+Wants=rmf_core.service
 [Service]
 Type=simple
 ExecStart=/bin/bash /usr/sbin/rmf_adapter_jobot
