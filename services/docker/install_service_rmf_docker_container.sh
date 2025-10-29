@@ -1,7 +1,7 @@
 cat << EOF2 | sudo tee /usr/sbin/rmf_docker_container
 #!/bin/bash
 
-/usr/bin/docker rmf_server_elettra
+/usr/bin/docker start rmf_server_elettra
 
 EOF2
 
