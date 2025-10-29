@@ -1,7 +1,7 @@
 cat << EOF2 | sudo tee /usr/sbin/rmf_docker_container
 #!/bin/bash
 
-/usr/bin/docker start rmf_server_elettra
+/usr/bin/docker rmf_server_elettra
 
 EOF2
 
@@ -13,6 +13,7 @@ cat << EOF3 | sudo tee /etc/systemd/system/rmf_docker_container.service
 Description=zenoh router
 Requires=docker.service
 After=docker.service
+After=rmf_api_dash_server.service
 [Service]
 Type=simple
 ExecStart=/bin/bash /usr/sbin/rmf_docker_container
