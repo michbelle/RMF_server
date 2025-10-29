@@ -1,27 +1,36 @@
 
 cat << EOF2 | sudo tee /usr/sbin/rmf_api_dash_server
 #!/bin/bash
-
-/opt/ros/jazzy/bin/ros2 launch rmf_server_elettra 0_rmf_api_dash_server.launch.xml 
-
+export path_repo=/home/rmf_server/
+docker compose -f \$path_repo/RMF_server/Docker_f/dockerCompose_api_dashboard/compose.yml up 
 EOF2
 
 sudo chmod +x /usr/sbin/rmf_api_dash_server
 
+cat << EOF2 | sudo tee /usr/sbin/rmf_api_dash_server_down
+#!/bin/bash
+export path_repo=/home/rmf_server/
+docker compose -f \$path_repo/RMF_server/Docker_f/dockerCompose_api_dashboard/compose.yml down 
+EOF2
+
+sudo chmod +x /usr/sbin/rmf_api_dash_server_down
 
 cat << EOF3 | sudo tee /etc/systemd/system/rmf_api_dash_server.service
 [Unit]
 Description=zenoh router
-After=zenoh_client_server.target
-Wants=zenoh_client_server.target
+Requires=docker.service
+After=docker.service
+
 [Service]
 Type=simple
 Environment=RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 Environment=ROS_DOMAIN_ID=30
 User=rmf_server
 ExecStart=/bin/bash /usr/sbin/rmf_api_dash_server
+ExecStop=/bin/bash /usr/sbin/rmf_api_dash_server_down
 Restart=on-failure
 RestartSec=5
+
 [Install]
 WantedBy=multi-user.target
 EOF3
