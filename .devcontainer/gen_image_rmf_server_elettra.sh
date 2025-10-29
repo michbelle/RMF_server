@@ -1,0 +1,1 @@
+DOCKER_BUILDKIT=1 docker build -t rmf_server_elettra . --ssh default

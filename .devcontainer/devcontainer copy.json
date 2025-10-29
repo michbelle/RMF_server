@@ -1,0 +1,38 @@
+{
+    "name": "ROS 2 dev Container",
+    "privileged": true,
+    "image": "rmf_server_elettra",
+    "remoteUser": "root",
+    "workspaceFolder": "/root/openRMF_ws/",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/root/openRMF_ws/src/RMF_server,type=bind",
+    "customizations": {
+        "vscode": {
+            "extensions":[
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-themes",
+                "ms-vscode.cpptools-extension-pack",
+                "twxs.cmake",
+                "ms-python.python",
+                // "donjayamanne.python-extension-pack",
+                "ranch-hand-robotics.rde-ros-2"
+            ]
+        }
+    },
+    "containerEnv": {
+        "DISPLAY": "unix:0",
+        "ROS_AUTOMATIC_DISCOVERY_RANGE": "LOCALHOST", //from jazzy doc is defined
+        "ROS_DOMAIN_ID": "30"
+    },
+    "runArgs": [
+        "--net=host",
+        "--pid=host",
+        "--ipc=host",
+        "-e", "DISPLAY=${env:DISPLAY}",
+        "--name=rmf_server"
+    ],
+    "mounts": [
+       "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
+       "source=/dev/dri,target=/dev/dri,type=bind,consistency=cached"
+    ],
+    "postCreateCommand": ""
+}
