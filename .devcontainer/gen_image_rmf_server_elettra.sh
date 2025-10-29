@@ -1,1 +1,1 @@
-DOCKER_BUILDKIT=1 docker build -t rmf_server_elettra . --ssh default
+DOCKER_BUILDKIT=1 docker build -t rmf_server_elettra_dev . --ssh default

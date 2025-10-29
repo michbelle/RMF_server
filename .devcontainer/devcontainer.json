@@ -2,7 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
 	// "dockerFile": "Dockerfile",
-    "image": "rmf_server_elettra",
+    "image": "rmf_server_elettra_dev",
 	// "build": {
 	// 	"args": {
 	// 		"WORKSPACE": "${containerWorkspaceFolder}"
@@ -13,7 +13,7 @@
 	// 	"options": ["--pull"]
 	// },
 	"runArgs": [
-        "--name=rmf_server_elettra",
+        "--name=rmf_server_elettra_dev",
 		"--network=host",
 		"--cap-add=SYS_PTRACE",
 		"--security-opt=seccomp:unconfined",
