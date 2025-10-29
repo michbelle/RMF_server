@@ -23,3 +23,9 @@ DOCKER_BUILDKIT=1 docker build -t tesi_image . --ssh default
 ```bash
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install 
 ```
+
+
+bug on not executable files
+```bash
+chmod +x /openRMF_ws/install/free_fleet_adapter/lib/free_fleet_adapter/*
+```
