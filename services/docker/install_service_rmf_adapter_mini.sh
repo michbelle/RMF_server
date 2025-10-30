@@ -1,7 +1,8 @@
 cat << EOF2 | sudo tee /usr/sbin/rmf_adapter_mini
 #!/bin/bash
+export ROS_DOMAIN_ID=30
 
-docker exec -i --user ros rmf_server_elettra  bash -c "source /opt/ros/jazzy/setup.bash && source /home/ros/.bashrc && source /openRMF_ws/install/setup.bash && /opt/ros/jazzy/bin/ros2 launch rmf_server_elettra 1rmf_mini_fleet_adapter.launch.xml server_uri:='ws://localhost:8000/_internal'"
+docker exec -i --user ros rmf_server_elettra  bash -c "source /opt/ros/jazzy/setup.bash && source /home/ros/.bashrc && source /openRMF_ws/install/setup.bash && export ROS_DOMAIN_ID=30 && /opt/ros/jazzy/bin/ros2 launch rmf_server_elettra 1rmf_mini_fleet_adapter.launch.xml server_uri:='ws://localhost:8000/_internal'"
 
 
 EOF2
