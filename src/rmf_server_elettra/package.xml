@@ -39,6 +39,9 @@
   <depend>cartographer_ros</depend>
   <depend>cartographer</depend>
 
+  <!-- rmf -->
+  <depend>ros_jazzy_rmf_dev</depend>
+
   <export>
     <build_type>ament_cmake</build_type>
   </export>
