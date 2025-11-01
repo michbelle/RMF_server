@@ -2,3 +2,7 @@
 	path = src/free_fleet
 	url = git@github.com:michbelle/free_fleet.git
 	branch = jazzy
+[submodule "src/rmf_deployment_template"]
+	path = src/rmf_deployment_template
+	url = git@github.com:michbelle/rmf_deployment_template.git
+	branch = main
