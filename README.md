@@ -29,3 +29,7 @@ bug on not executable files
 ```bash
 chmod +x /openRMF_ws/install/free_fleet_adapter/lib/free_fleet_adapter/*
 ```
+
+```bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+```
